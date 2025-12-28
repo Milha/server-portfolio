@@ -3,7 +3,7 @@ import Home from "@/component/Home/Home";
 
 const HomePage = () => {
   return (
-    <div className="text-5xl text-center">
+    <div>
       <Home />
     </div>
   );

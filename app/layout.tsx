@@ -3,6 +3,8 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 
 import ResponsiveNav from "@/component/Home/Navbar/ResponsiveNav";
+import Footer from "@/component/Home/Footer/Footer";
+import ScrollToTop from "@/component/Helper/ScrollToTop";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -25,10 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="custom-scrollbar">
       <body className={`${font.className} antialiased`}>
         <ResponsiveNav />
         {children}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

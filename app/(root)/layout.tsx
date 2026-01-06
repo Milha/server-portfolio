@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 import ResponsiveNav from "@/component/Home/Navbar/ResponsiveNav";
 import Footer from "@/component/Home/Footer/Footer";
@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="custom-scrollbar">
       <body className={`${font.className} antialiased`}>
-        {/* <ResponsiveNav /> */}
+        <ResponsiveNav />
         {children}
-        {/* <Footer />
-        <ScrollToTop /> */}
+        <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

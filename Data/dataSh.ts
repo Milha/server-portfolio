@@ -1,8 +1,8 @@
-export const BaseInfo = {
+export const BaseInfoSh = {
   name: "Miki",
   position: "Full Stack Web Developer",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro numquam ad, vero consequuntur aperiam cumque voluptatum pariatur veniam? Qui facilis est ipsam odio cum!",
+    "Gradim modularne, elegantne web aplikacije sa jasnom arhitekturom i pristupom koji donosi lakoću u radu i razvoju. Fokusiram se na Next.js, React i skalabilna rešenja koja rastu zajedno sa biznisom.",
   profilePic: "/images/miki-profile.jpg",
 };
 

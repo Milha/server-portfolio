@@ -59,6 +59,11 @@ const Nav = ({ openNav }: Props) => {
               className="w-8 h-8 cursor-pointer text-white lg:hidden"
             />
           </div>
+          <div className="hidden lg:flex items-center text-gray-200 space-x-2">
+            <Link href="/">EN</Link>
+            <span>|</span>
+            <Link href="/sh">SH</Link>
+          </div>
         </div>
       </div>
     </div>

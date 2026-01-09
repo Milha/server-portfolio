@@ -25,6 +25,11 @@ const MobileNav = ({ showNav, closeNav }: Props) => {
             </p>
           </Link>
         ))}
+        <div className="items-center text-gray-200 ml-12 space-x-2 lg:hidden">
+          <Link href="/">EN</Link>
+          <span>|</span>
+          <Link href="/sh">SH</Link>
+        </div>
         <CgClose
           onClick={closeNav}
           className="absolute top-[0.7rem] right-[1.4rem] sw:w-8 sm:h-8 w-6 h-6 text-white"

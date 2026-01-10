@@ -5,12 +5,12 @@ import Image from "next/image";
 
 const HeroSh = () => {
   return (
-    <div className="w-full pt-[4vh] md:pt-[12vh] h-screen bg-[#0f0715] overflow-hidden relative">
+    <div className="w-full pt-[4vh] md:pt-[6vh] h-screen bg-[#0f0715] overflow-hidden relative text-center">
       <div className="flex justify-center flex-col w-4/5 h-full mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
           <div>
             <h1 className="text-2xl md:text-3xl lg:text-4xl mb-5 text-gray-300 font-semibold">
-              I am {BaseInfoSh.name}
+              Ja sam {BaseInfoSh.name}
             </h1>
             <h2 className="text-bg text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold md:leading-12 lg:leading-14 xl:leading-16 ">
               {BaseInfoSh.position}

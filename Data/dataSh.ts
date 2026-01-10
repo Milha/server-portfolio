@@ -6,14 +6,14 @@ export const BaseInfoSh = {
   profilePic: "/images/miki-profile.jpg",
 };
 
-export const aboutInfo = {
-  title: "Crafting Web Application with Passion and Precision",
+export const aboutInfoSh = {
+  title: "Stvaram web aplikacije sa strašću i preciznošću",
   description:
-    "At webdev warriors, we’re a dedicated team of designers and developers committed to delivering tailored web solutions. With a blend of creativity and technical expertise, we help businesses elevate their online presence and achieve their goals",
-  client: "50+",
-  experience: "3+",
-  project: "200+",
-  website: "100+",
+    "Pomažem preduzetnicima da transformišu svoje ideje u moćne digitalne alate. Koristeći Next.js, izrađujem web aplikacije koje nisu samo estetski privlačne, već i optimizovane za maksimalnu korisnost i rast tvog biznisa. Tvoji ciljevi su moj prioritet – od koncepta do finalnog koda.",
+  client: "5+",
+  experience: "5+",
+  project: "10+",
+  website: "10+",
 };
 
 export const servicesData = [

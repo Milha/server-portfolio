@@ -31,13 +31,13 @@ export const servicesData = [
       "Secure online stores with user-friendly shopping and payments.",
     icon: "/images/s2.png",
   },
-  {
-    id: 3,
-    title: "API Integration",
-    description:
-      "Seamless integration for smooth data sharing and functionality.",
-    icon: "/images/s3.png",
-  },
+  // {
+  //   id: 3,
+  //   title: "API Integration",
+  //   description:
+  //     "Seamless integration for smooth data sharing and functionality.",
+  //   icon: "/images/s3.png",
+  // },
   {
     id: 4,
     title: "User Interfaces",
@@ -52,12 +52,12 @@ export const servicesData = [
       "Efficient and scalable database management for your data needs.",
     icon: "/images/s5.png",
   },
-  {
-    id: 6,
-    title: "Real-Time Features",
-    description: "Add live chat, notifications, and real-time data updates.",
-    icon: "/images/s6.png",
-  },
+  // {
+  //   id: 6,
+  //   title: "Real-Time Features",
+  //   description: "Add live chat, notifications, and real-time data updates.",
+  //   icon: "/images/s6.png",
+  // },
   {
     id: 7,
     title: "Speed Optimization",

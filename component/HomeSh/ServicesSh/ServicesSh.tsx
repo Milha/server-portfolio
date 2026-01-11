@@ -1,16 +1,16 @@
 import SectionHeading from "@/component/Helper/SectionHeading";
-import { servicesData } from "@/Data/data";
-import ServiceCard from "./ServiceCard";
+import { servicesDataSh } from "@/Data/dataSh";
+import ServiceCardSh from "./ServiceCardSh";
 
-const Services = () => {
+const ServicesSh = () => {
   return (
     <div className="pt-16 pb-16 bg-[#0f0715] ">
-      <SectionHeading>Services</SectionHeading>
+      <SectionHeading>Usluge</SectionHeading>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-[80%] mx-auto items-center mt-20">
-        {servicesData.map((service) => {
+        {servicesDataSh.map((service) => {
           return (
             <div key={service.id}>
-              <ServiceCard service={service} />
+              <ServiceCardSh service={service} />
             </div>
           );
         })}
@@ -19,4 +19,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesSh;

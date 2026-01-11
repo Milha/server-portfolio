@@ -16,57 +16,60 @@ export const aboutInfoSh = {
   website: "10+",
 };
 
-export const servicesData = [
+export const servicesDataSh = [
   {
     id: 1,
-    title: " Web Applications",
-    description: "Tailored web apps built with the latest technologies.",
+    title: " Web Aplikacije",
+    description:
+      "Prilagođene web aplikacije zasnovane na savremenim tehnologijama.",
     icon: "/images/s1.png",
   },
   {
     id: 2,
-    title: "E-commerce Websites",
+    title: "E-commerce Websajtovi",
     description:
-      "Secure online stores with user-friendly shopping and payments.",
+      "Sigurne online prodavnice sa jednostavnom kupovinom i plaćanjem.",
     icon: "/images/s2.png",
   },
-  {
-    id: 3,
-    title: "API Integration",
-    description:
-      "Seamless integration for smooth data sharing and functionality.",
-    icon: "/images/s3.png",
-  },
+  // {
+  //   id: 3,
+  //   title: "API Integration",
+  //   description:
+  //     "Seamless integration for smooth data sharing and functionality.",
+  //   icon: "/images/s3.png",
+  // },
   {
     id: 4,
-    title: "User Interfaces",
+    title: "Korisnički Interfejsi",
     description:
-      "Engaging, responsive front-end designs for better user experiences.",
+      "Moderan i prilagodljiv front-end koji unapređuje korisničko iskustvo.",
     icon: "/images/s4.png",
   },
   {
     id: 5,
-    title: "Database Solutions",
+    title: "Baze Podataka",
     description:
-      "Efficient and scalable database management for your data needs.",
+      "Efikasno i skalabilno upravljanje bazama podataka za vaše potrebe.",
     icon: "/images/s5.png",
   },
-  {
-    id: 6,
-    title: "Real-Time Features",
-    description: "Add live chat, notifications, and real-time data updates.",
-    icon: "/images/s6.png",
-  },
+  // {
+  //   id: 6,
+  //   title: "Real-Time Features",
+  //   description: "Add live chat, notifications, and real-time data updates.",
+  //   icon: "/images/s6.png",
+  // },
   {
     id: 7,
-    title: "Speed Optimization",
-    description: "Boost performance with faster load times and optimization.",
+    title: "Optimizacija Brzine",
+    description:
+      "Unapređene performanse zahvaljujući bržem učitavanju i optimizaciji.",
     icon: "/images/s7.png",
   },
   {
     id: 8,
-    title: "Website Management",
-    description: "Easy content management systems with flexible controls.",
+    title: "Upravljanje Websajtovima",
+    description:
+      "Prilagodljivi sistemi za upravljanje sadržajem sa potpunom kontrolom.",
     icon: "/images/s8.png",
   },
 ];

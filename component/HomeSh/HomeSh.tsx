@@ -1,6 +1,7 @@
 import HeroSh from "./HeroSh/HeroSh";
 import AboutSh from "./AboutSh/AboutSh";
 import ServicesSh from "./ServicesSh/ServicesSh";
+import ProjectSh from "./ProjectSh/ProjectSh";
 
 const HomeSh = () => {
   return (
@@ -8,6 +9,7 @@ const HomeSh = () => {
       <HeroSh />
       <AboutSh />
       <ServicesSh />
+      <ProjectSh />
     </div>
   );
 };

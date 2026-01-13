@@ -154,8 +154,8 @@ export const skillsData = [
   },
   {
     id: 7,
-    title: "MongoDB",
-    image: "/images/mongo.svg",
+    title: "Next JS",
+    image: "/images/nextjs-white.svg",
     percent: "65%",
   },
   {
@@ -166,14 +166,14 @@ export const skillsData = [
   },
   {
     id: 9,
-    title: "Firebase",
-    image: "/images/firebase.svg",
+    title: "SQL",
+    image: "/images/sql.svg",
     percent: "75%",
   },
   {
     id: 10,
-    title: "Vue",
-    image: "/images/vue.svg",
+    title: "Tailwind CSS",
+    image: "/images/tailwind-1.svg",
     percent: "35%",
   },
 ];

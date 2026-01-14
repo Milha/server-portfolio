@@ -2,7 +2,8 @@
 import ResponsiveNav from "@/component/Home/Navbar/ResponsiveNav";
 import React from "react";
 import "../globals.css";
-
+import Footer from "@/component/Home/Footer/Footer";
+import FooterSh from "@/component/HomeSh/FooterSh/FooterSh";
 
 export default function NovigrupLayout({
   children,
@@ -13,6 +14,7 @@ export default function NovigrupLayout({
     <div>
       <ResponsiveNav />
       <section>{children}</section>
+      <FooterSh />
     </div>
   );
 }

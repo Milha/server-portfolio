@@ -2,7 +2,7 @@ import React from "react";
 
 import Image from "next/image";
 
-const Footer = () => {
+const FooterSh = () => {
   return (
     <footer className="pt-16 pb-16 bg-[#0f0715]">
       <div>
@@ -15,34 +15,34 @@ const Footer = () => {
         />
       </div>
       <nav aria-label="Footer">
+        {/* <div>Početna</div>
+        <div>O nama</div>
+        <div>Usluge</div>
+        <div>Projekti</div>
+        <div>Kontakt</div> */}
         <ul className="flex items-center flex-wrap justify-center gap-x-10 gap-y-4 text-white font-bold">
           <li>
-            <a href="#">Home</a>
+            <a href="#">Početna</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#">O nama</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#">Usluge</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#">Projekti</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#">Kontakt</a>
           </li>
         </ul>
-        {/* <div>Home</div>
-        <div>About</div>
-        <div>Services</div>
-        <div>Projects</div>
-        <div>Contact</div> */}
       </nav>
       <p className="text-white text-opacity-60 mt-6 text-center text-sm md:text-base">
-        &copy; 2025 All Rights Reserved by Milha Solutions
+        &copy; 2025 Sva prava zadržava Milha Solutions
       </p>
     </footer>
   );
 };
 
-export default Footer;
+export default FooterSh;

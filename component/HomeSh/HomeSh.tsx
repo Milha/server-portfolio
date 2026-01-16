@@ -3,6 +3,7 @@ import AboutSh from "./AboutSh/AboutSh";
 import ServicesSh from "./ServicesSh/ServicesSh";
 import ProjectSh from "./ProjectSh/ProjectSh";
 import SkillsSh from "./SkillsSh/SkillsSh";
+import ContactSh from "./ContactSh/ContactSh";
 
 const HomeSh = () => {
   return (
@@ -12,6 +13,7 @@ const HomeSh = () => {
       <ServicesSh />
       <ProjectSh />
       <SkillsSh />
+      <ContactSh />
     </div>
   );
 };

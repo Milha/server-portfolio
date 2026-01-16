@@ -242,8 +242,8 @@ export const blogs = [
   },
 ];
 
-export const contactData = {
-  phone: "+88(012345 789)",
-  email: "example@gmail.com",
-  address: "Dhaka , Bangladesh",
+export const contactDataSh = {
+  phone: "+38163272252",
+  email: "mikiivanovic01@gmail.com",
+  address: "Beograd , Srbija",
 };

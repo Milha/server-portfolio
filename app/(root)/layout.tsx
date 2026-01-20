@@ -19,6 +19,9 @@ const font = Sora({
 export const metadata: Metadata = {
   title: "Miki Ivanović Portfolio Website",
   description: "Portfolio website of Miki Ivanović, a software developer.",
+  verification: {
+    google: "uVhTz5b9NPKhGCoPqVvfjhWtfA7Rc-OReqwSNPwD6pw",
+  },
 };
 
 export default function RootLayout({

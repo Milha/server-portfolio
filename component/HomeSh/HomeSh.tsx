@@ -7,7 +7,7 @@ import ContactSh from "./ContactSh/ContactSh";
 
 const HomeSh = () => {
   return (
-    <div className="pt-16 pb-16 bg-[#050709]">
+    <div className="text-5xl text-center overflow-hidden">
       <HeroSh />
       <AboutSh />
       <ServicesSh />

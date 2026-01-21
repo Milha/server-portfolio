@@ -30,13 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="custom-scrollbar">
-      <body className={`${font.className} antialiased`}>
-        <ResponsiveNav />
-        {children}
-        <Footer />
-        <ScrollToTop />
-      </body>
-    </html>
+    <div className={`custom-scrollbar ${font.className} antialiased`}>
+      <ResponsiveNav />
+      {children}
+      <Footer />
+      <ScrollToTop />
+    </div>
   );
 }

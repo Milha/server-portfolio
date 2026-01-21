@@ -1,39 +1,36 @@
 import { NextResponse } from "next/server";
-import { Pool } from "pg";
-
-// Loguj da vidiš da li se varijabla učitava
-console.log("DATABASE_URL:", process.env.DATABASE_URL);
-
-let pool: Pool | null = null;
-
-try {
-  pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-  });
-} catch (error) {
-  console.error("Failed to create pool:", error);
-}
+import prisma from "@/lib/prisma";
 
 export async function GET() {
-  if (!pool) {
+  try {
+    const users = await prisma.user.findMany();
+    return NextResponse.json({ users }, { status: 200 });
+  } catch (error) {
+    console.error("Database error:", error);
     return NextResponse.json(
-      { error: "Database pool not initialized" },
+      { error: "Failed to fetch users" },
       { status: 500 },
     );
   }
+}
 
+export async function POST(request: Request) {
   try {
-    const result = await pool.query("SELECT NOW()");
-    return NextResponse.json({ time: result.rows[0].now });
-  } catch (error) {
-    // Loguj ceo error da vidiš šta se dešava
-    console.error("DB error:", error);
+    const { name, email } = await request.json();
+
+    const user = await prisma.user.create({
+      data: {
+        name,
+        email,
+      },
+    });
+
+    return NextResponse.json({ user }, { status: 201 });
+  } catch (error: any) {
+    console.error("Database error:", error);
     return NextResponse.json(
-      { error: String(error) }, // koristi String(error) da ne bude prazan
+      { error: error.message || "Failed to create user" },
       { status: 500 },
     );
-  } finally {
-    // Ako testiraš lokalno, možeš zatvoriti pool da ne ostane otvoren
-    // await pool.end();
   }
 }

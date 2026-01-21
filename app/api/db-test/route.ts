@@ -4,11 +4,24 @@ import { Pool } from "pg";
 // Loguj da vidiš da li se varijabla učitava
 console.log("DATABASE_URL:", process.env.DATABASE_URL);
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+let pool: Pool | null = null;
+
+try {
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+  });
+} catch (error) {
+  console.error("Failed to create pool:", error);
+}
 
 export async function GET() {
+  if (!pool) {
+    return NextResponse.json(
+      { error: "Database pool not initialized" },
+      { status: 500 },
+    );
+  }
+
   try {
     const result = await pool.query("SELECT NOW()");
     return NextResponse.json({ time: result.rows[0].now });

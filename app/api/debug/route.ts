@@ -12,9 +12,11 @@ export async function GET() {
         : "NO URL",
     };
 
-    // Pokušaj jednostavnu konekciju
+    // Pokušaj jednostavnu konekciju i čitanje usera
     let connectionTest = "NOT TESTED";
+    let usersTest = "NOT TESTED";
     let error = null;
+    let users = [];
 
     try {
       const { default: prisma } = await import("@/lib/prisma");
@@ -22,6 +24,11 @@ export async function GET() {
       // Test osnovne konekcije
       await prisma.$connect();
       connectionTest = "SUCCESS";
+
+      // Test čitanja usera
+      users = await prisma.user.findMany({ take: 5 });
+      usersTest = "SUCCESS";
+
       await prisma.$disconnect();
     } catch (err: any) {
       connectionTest = "FAILED";
@@ -37,6 +44,9 @@ export async function GET() {
       server: "running",
       database: {
         connection: connectionTest,
+        usersQuery: usersTest,
+        userCount: users.length,
+        users: users.map((u) => ({ name: u.name, email: u.email })),
         error: error,
       },
       debug: debugInfo,

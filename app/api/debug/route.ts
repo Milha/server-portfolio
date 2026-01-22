@@ -1,0 +1,56 @@
+import { NextResponse } from "next/server";
+
+export async function GET() {
+  try {
+    // Debug informacije
+    const debugInfo = {
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV,
+      databaseUrl: process.env.DATABASE_URL ? "SET" : "NOT SET",
+      databaseUrlPrefix: process.env.DATABASE_URL
+        ? process.env.DATABASE_URL.substring(0, 20) + "..."
+        : "NO URL",
+    };
+
+    // Pokušaj jednostavnu konekciju
+    let connectionTest = "NOT TESTED";
+    let error = null;
+
+    try {
+      const { default: prisma } = await import("@/lib/prisma");
+
+      // Test osnovne konekcije
+      await prisma.$connect();
+      connectionTest = "SUCCESS";
+      await prisma.$disconnect();
+    } catch (err: any) {
+      connectionTest = "FAILED";
+      error = {
+        message: err.message,
+        code: err.code,
+        name: err.name,
+      };
+    }
+
+    return NextResponse.json({
+      status: "debug-info",
+      server: "running",
+      database: {
+        connection: connectionTest,
+        error: error,
+      },
+      debug: debugInfo,
+    });
+  } catch (err: any) {
+    return NextResponse.json(
+      {
+        status: "error",
+        error: {
+          message: err.message,
+          name: err.name,
+        },
+      },
+      { status: 500 },
+    );
+  }
+}

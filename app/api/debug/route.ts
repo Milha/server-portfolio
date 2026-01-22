@@ -16,7 +16,7 @@ export async function GET() {
     let connectionTest = "NOT TESTED";
     let usersTest = "NOT TESTED";
     let error = null;
-    let users = [];
+    let users: any[] = [];
 
     try {
       const { default: prisma } = await import("@/lib/prisma");
@@ -32,6 +32,7 @@ export async function GET() {
       await prisma.$disconnect();
     } catch (err: any) {
       connectionTest = "FAILED";
+      usersTest = "FAILED";
       error = {
         message: err.message,
         code: err.code,

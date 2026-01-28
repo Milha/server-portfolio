@@ -18,3 +18,12 @@ model User {
   email     String   @unique
   image     String?
 }
+
+model ContactMessage {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  service   String
+  createdAt DateTime @default(now())
+}
